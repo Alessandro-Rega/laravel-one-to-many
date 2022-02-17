@@ -7,6 +7,11 @@
             <div class="card my-4">
                 <div class="card-header">
                     <h3>{{$post->title}}</h3>
+                    @if(isset($post->category->name))
+                    <h6>Categoria: {{$post->category->name}}</h6>
+                    @else
+                    <h6>Categoria: </h6>
+                    @endif
                 </div>
                 <div class="card-body">
                     <p>{{$post->content}}</p>

@@ -15,6 +15,7 @@
                   <tr>
                     <th scope="col">id</th>
                     <th scope="col">Title</th>
+                    <th scope="col">Category</th>
                     <th scope="col">Published</th>
                     <th scope="col">Slug</th>
                     <th scope="col">Action</th>
@@ -25,6 +26,7 @@
                     <tr>
                         <th scope="row">{{$post->id}}</th>
                         <td>{{$post->title}}</td>
+                        <td>{{$post->category->name}}</td>
                         <td>
                             @if ($post->published)
                                 <span class="bg-success text-white p-1 rounded">Pubblicato</span>
