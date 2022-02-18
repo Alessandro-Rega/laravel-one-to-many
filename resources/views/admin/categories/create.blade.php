@@ -11,7 +11,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Name</label>
-                    <input type="text" class="form-control @error('title') is-invalid @enderror" id="name" name="name" placeholder="Inserisci il nome" value="{{old('name')}}">
+                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Inserisci il nome" value="{{old('name')}}">
                     @error('name')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
