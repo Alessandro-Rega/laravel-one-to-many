@@ -37270,6 +37270,21 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+if (document.getElementById('_back')) {
+  var back = document.getElementById('_back');
+  back.addEventListener('click', function () {
+    return history.back();
+  });
+}
+
+if (document.getElementById('_back2')) {
+  var _back = document.getElementById('_back2');
+
+  _back.addEventListener('click', function () {
+    return history.go(-3);
+  });
+}
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

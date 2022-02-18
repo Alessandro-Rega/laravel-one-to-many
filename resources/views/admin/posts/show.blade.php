@@ -25,7 +25,11 @@
                     @endif
                 </div>
                 <div class="card-body d-flex">
-                    <a href="{{route('posts.index')}}"><button type="button" class="btn btn-primary">Indietro</button></a>
+                    @if (url()->previous() == "http://localhost:8000/admin/posts/{$post->id}/edit")
+                    <a id="_back2" class="btn btn-primary">Indietro</a>
+                    @else 
+                    <a id="_back" class="btn btn-primary">Indietro</a>
+                    @endif
                     <a href="{{route('posts.edit', $post->id)}}" class="mx-2"><button type="button" class="btn btn-warning">Modifica</button></a>
                     <form action="{{route("posts.destroy", $post->id)}}" method="POST">
                         @csrf

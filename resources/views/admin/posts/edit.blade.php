@@ -49,7 +49,7 @@
                 <button type="submit" class="btn btn-warning">Modifica</button>
             </form>
             <div class="mt-4">
-                <a href="{{route('posts.show', $post->id)}}"><button type="button" class="btn btn-primary">Indietro</button></a>
+                <a id="_back" class="btn btn-primary">Indietro</a>
             </div>
         </div>
     </div>
