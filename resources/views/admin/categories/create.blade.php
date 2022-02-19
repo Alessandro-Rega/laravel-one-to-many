@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row">
         <div class="col-md-12">
             <div class="card-header mb-4">
                 <h5>Crea Categoria</h5>
             </div>
-            <form action="{{route('category.store')}}" method="POST">
+            <form action="{{route('category.store')}}" method="POST" class="my-4">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Name</label>
@@ -18,6 +18,7 @@
                 </div>
                 <button type="submit" class="btn btn-success">Crea</button>
             </form>
+            <a href="{{route('category.index')}}"><button type="button" class="btn btn-primary">Indietro</button></a>
         </div>
     </div>
 </div>

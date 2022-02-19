@@ -18,6 +18,7 @@
                     @enderror
                 </form>
                 <div class="d-flex">
+                    <a href="{{route('category.index')}}" class="mx-2"><button type="button" class="btn btn-primary">Indietro</button></a>
                     <form action="{{route("category.destroy", $category->id)}}" method="POST">
                         @csrf
                         @method('DELETE')

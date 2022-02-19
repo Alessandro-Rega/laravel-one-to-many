@@ -37270,21 +37270,6 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-if (document.getElementById('_back')) {
-  var back = document.getElementById('_back');
-  back.addEventListener('click', function () {
-    return history.back();
-  });
-}
-
-if (document.getElementById('_back2')) {
-  var _back = document.getElementById('_back2');
-
-  _back.addEventListener('click', function () {
-    return history.go(-3);
-  });
-}
-
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37350,8 +37335,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Documenti\Boolean\Classe #47\PHP\laravel-one-to-many\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Documenti\Boolean\Classe #47\PHP\laravel-one-to-many\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/alk3r/Documenti/Boolean/laravel-one-to-many/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/alk3r/Documenti/Boolean/laravel-one-to-many/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
