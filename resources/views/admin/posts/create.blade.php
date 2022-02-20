@@ -7,7 +7,7 @@
             <div class="card-header mb-4">
                 <h5>Crea Post</h5>
             </div>
-            <form action="{{route('posts.store')}}" method="POST">
+            <form action="{{route('posts.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
@@ -20,6 +20,20 @@
                 <label for="content" class="form-label">Content</label>
                 <textarea class="form-control @error('content') is-invalid @enderror" id="content" name="content" placeholder="Inserisci il contenuto" rows="10">{{old('content')}}</textarea>
                 @error('content')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="image" name="image">
+                      <label class="custom-file-label" for="image">Scegli un'immagine</label>
+                    </div>
+                </div>
+                <div>
+                @error('image')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 </div>

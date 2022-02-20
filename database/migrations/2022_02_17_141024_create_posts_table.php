@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->id()->unique();
             $table->string('title', 100);
             $table->text('content');
+            $table->string('image')->nullable();
             $table->string('slug', 120)->unique();
             $table->boolean('published')->default(false);
             $table->foreignId('category_id')->nullable()->onDelete('set null')->constrained();

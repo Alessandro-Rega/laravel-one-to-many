@@ -13,6 +13,9 @@
                     <h6>Categoria: </h6>
                     @endif
                 </div>
+                @if($post->image)
+                    <img src="{{asset("storage/{$post->image}")}}" alt="{{$post->title}}">
+                @endif
                 <div class="card-body">
                     <p>{{$post->content}}</p>
                 </div>
