@@ -6,22 +6,3 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
-
-.custom-file-input{
-    margin-left: -72px;
-    margin-top: 11px;
-    opacity: 1;
-}
-
-.custom-file-label{
-    &::before{
-        content: " ";
-        display: inline-block;
-        width: 80%;
-    }
-}
-
-.input-group-prepend{
-    z-index: 3;
-}

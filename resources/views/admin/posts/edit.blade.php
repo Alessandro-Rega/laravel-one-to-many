@@ -24,14 +24,12 @@
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">Upload</span>
-                    </div>
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="image" name="image">
-                      <label class="custom-file-label" for="image">Scegli un'immagine</label>
-                    </div>
+                <div class="mb-3 d-flex flex-column">
+                    <label for="image" class="form-label mb-2">Scegli un'immagine</label><br>
+                    @if($post->image)
+                    <img class="img-fluid img-thumbnail w-25 my-3" src="{{asset("storage/{$post->image}")}}" alt="">
+                    @endif
+                    <input type="file" class="@error('image') is-invalid @enderror" id="image" name="image">
                 </div>
                 <div>
                 @error('image')

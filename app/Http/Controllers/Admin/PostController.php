@@ -46,7 +46,7 @@ class PostController extends Controller
         $request->validate([
             "title" => "required|string|max:100",
             "content" => "required",
-            "image" => "nullable|mimes:jpeg,jpg,png|image|max:2048",
+            "image" => "nullable|mimes:jpeg,jpg,png|max:2048",
             "published" => "sometimes|accepted",
             "category_id" => "nullable|exists:categories,id",
         ]);
@@ -117,7 +117,7 @@ class PostController extends Controller
         $request->validate([
             "title" => "required|string|max:100",
             "content" => "required",
-            "image" => "nullable|mimes:jpeg,jpg,png|image|max:2048",
+            "image" => "nullable|mimes:jpeg,jpg,png|max:2048",
             "published" => "sometimes|accepted",
             "category_id" => "nullable|exists:categories,id",
         ]);

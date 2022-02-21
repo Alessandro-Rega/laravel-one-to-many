@@ -26,7 +26,11 @@
                     <tr>
                         <th scope="row">{{$post->id}}</th>
                         <td>{{$post->title}}</td>
+                        @if(isset($post->category->name))
                         <td>{{$post->category->name}}</td>
+                        @else
+                        <td>Null</td>
+                        @endif
                         <td>
                             @if ($post->published)
                                 <span class="bg-success text-white p-1 rounded">Pubblicato</span>

@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('image')->nullable();
             $table->string('slug', 120)->unique();
             $table->boolean('published')->default(false);
-            $table->foreignId('category_id')->nullable()->onDelete('set null')->constrained();
+            $table->foreignId('category_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
         });
     }

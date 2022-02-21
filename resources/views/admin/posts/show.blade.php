@@ -29,7 +29,11 @@
                 </div>
                 <div class="card-body d-flex">
                     <a href="{{route('posts.index', $post->id)}}"><button type="button" class="btn btn-primary">Vai ai Post</button></a>
+                    @if(isset($post->category->name))
                     <a href="{{route('category.show', $post->category->id)}}" class="ml-2"><button type="button" class="btn btn-primary">Vai alla Categoria</button></a>
+                    @else
+                    <a href="{{route('category.index')}}" class="ml-2"><button type="button" class="btn btn-primary">Vai alle Categoria</button></a>
+                    @endif
                     <a href="{{route('posts.edit', $post->id)}}" class="mx-2"><button type="button" class="btn btn-warning">Modifica</button></a>
                     <form action="{{route("posts.destroy", $post->id)}}" method="POST">
                         @csrf
